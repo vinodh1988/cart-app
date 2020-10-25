@@ -2,6 +2,10 @@
 
 import React from 'react';
 import './App.css';
+import {BrowserRouter as Router, Route, Link} from  'react-router-dom'
+import About from './component/About';
+import Home from './component/Home';
+import Contact from './component/Contact';
 
 
 
@@ -13,30 +17,34 @@ class App extends React.Component
     render(){
     
       return(
+        <Router>
         <div>
-        <nav class="navbar navbar-expand-sm bg-green navbar-dark">
+        <nav className="navbar navbar-expand-sm bg-green navbar-dark">
      
-        <a class="navbar-brand" href="#">Organic Store</a>
+        <Link className="navbar-brand" to="/">Organic Store</Link>
         
     
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <Link className="nav-link" to="/">Home</Link>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Reach us</a>
+          <li className="nav-item">
+            <Link className="nav-link" to="/contact">Reach us</Link>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About us</a>
+          <li className="nav-item">
+            <Link className="nav-link" to="/about">About us</Link>
           </li>
         </ul>
       </nav>
-      <div class="content">
-      
+      <div className="content">
+      <Route path="/" exact component={Home} ></Route>
+      <Route path="/contact" component={Contact}></Route>
+      <Route path="/about" component={About}></Route>
       
       </div>
       
         </div>
+        </Router>
       );
 }
 }

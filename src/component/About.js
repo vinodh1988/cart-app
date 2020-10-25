@@ -7,6 +7,14 @@ class About extends React.Component
             <h1>About component</h1>
         )
     }
+
+    componentWillUnmount(){
+        console.log("deleted about")
+    }
+   
+    componentDidMount(){
+        console.log("About mounted")
+    }
 }
 
 export default About;
