@@ -31,6 +31,10 @@ class App extends React.Component
           </li>
         </ul>
       </nav>
+      <div class="content">
+      
+      
+      </div>
       
         </div>
       );
