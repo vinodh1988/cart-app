@@ -6,6 +6,7 @@ import {BrowserRouter as Router, Route, Link} from  'react-router-dom'
 import About from './component/About';
 import Home from './component/Home';
 import Contact from './component/Contact';
+import ProductDetails from './component/Reusable/ProductDetails';
 
 
 
@@ -40,7 +41,7 @@ class App extends React.Component
       <Route path="/" exact component={Home} ></Route>
       <Route path="/contact" component={Contact}></Route>
       <Route path="/about" component={About}></Route>
-      
+      <Route path="/details/:productid" component={ProductDetails}/>
       </div>
       
         </div>
